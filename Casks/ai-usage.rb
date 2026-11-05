@@ -17,6 +17,12 @@ cask "ai-usage" do
 
   app "AI Usage.app"
 
+  # The app is ad-hoc signed (no paid Apple Developer ID), so macOS quarantines
+  # and blocks it on first launch. Drop the flag for this app only.
+  postflight do
+    system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{appdir}/AI Usage.app"]
+  end
+
   zap trash: [
     "~/Library/Caches/ai-usage.json",
     "~/Library/Caches/ai-usage-cursor-events.json",
