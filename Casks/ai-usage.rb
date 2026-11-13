@@ -1,6 +1,6 @@
 cask "ai-usage" do
-  version "1.0.0"
-  sha256 "3c25a1e3b8c6882861b04325aa53dcd64851375c16055710d6333879ae7acfd4"
+  version "1.1.0"
+  sha256 "fd18686871f88276ccd9e2fc03816ee04e2ef9ba13b238b3f0ae8841a2e34d12"
 
   url "https://github.com/marcusviniciusf/ai-usage-bar/releases/download/v#{version}/AIUsage-#{version}-macos-universal.zip",
       verified: "github.com/marcusviniciusf/ai-usage-bar/"
